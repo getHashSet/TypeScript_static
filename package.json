@@ -1,0 +1,23 @@
+{
+  "name": "typescript_static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getHashSet/TypeScript_static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getHashSet/TypeScript_static/issues"
+  },
+  "homepage": "https://github.com/getHashSet/TypeScript_static#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}

@@ -1,11 +1,20 @@
-const button = document.querySelector("button");
-const number1 = document.getElementById("input1")! as HTMLInputElement;
-const number2 = document.getElementById("input2")! as HTMLInputElement;
+console.log("by Matthew Carpenter");
 
-const modernJavascript = (num: number, num2: number) => {
-  return num + num2;
-};
+function add(n1: number, n2: number, showResult: boolean, phrase: string) {
+    let result = n1 + n2
+    if (showResult) {
+        console.log(phrase + result);
+    } else {
+        n1 + n2;
+    };
 
-button.addEventListener("click", function() {
-  console.log(modernJavascript(+number1.value, +number2.value));
-});
+}
+
+const number2 = 2.8;
+const number1 = 5;
+const printResult = true;
+const resultPhrase = "Result is: ";
+
+const result = add(number1, number2, printResult, resultPhrase);
+
+console.log(result);
