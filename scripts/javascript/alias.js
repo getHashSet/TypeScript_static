@@ -8,6 +8,10 @@ function combine(input1, input2, resultConversion // this will add the types to 
     else if (typeof input1 === "string" && typeof input2 === "string" && resultConversion) {
         return result = input1 + input2;
     }
+    else {
+        return "error";
+    }
+    return result;
 }
 const combineStuff = combine(18, 26, "as-number");
 console.log(combineStuff);

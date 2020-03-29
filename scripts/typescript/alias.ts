@@ -11,7 +11,11 @@ function combine(
     return result = input2 + input2;
   } else if (typeof input1 === "string" && typeof input2 === "string" && resultConversion) {
     return result = input1 + input2;
+  } else {
+    return "error";
   }
+
+  return result;
 }
 
 const combineStuff = combine(18, 26, "as-number");
