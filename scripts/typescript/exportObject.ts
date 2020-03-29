@@ -1,0 +1,3 @@
+const masterObject = {
+    userName : "Matthew"
+};
