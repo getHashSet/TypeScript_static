@@ -17,3 +17,30 @@ void -- no return
 `$ tsc filename.ts` -- This will create a .js file in the same directory with the same name.
 `$ tsc filename --watch` -- This will create a local host that watches the file for changes. Similar to Pre Pros and SCSS.
 `$ tsc init` -- creat a **tsconfig.json** file that will track the whole project from this level and its children. *If placed in root this will watch the full app for ts fils.*
+`$ tsc -w` this will watch all files in the tsc init.
+
+
+## tsconfig.json
+
+```json
+"exclude": [
+    "functions.ts", /* ignore file nime by name */
+    "**/*.dev.ts" /* this will ignore any files in any directory that have .dev.ts in the name. example app.dev.ts will not be compiled*/,
+    "node_modules" /* prevent compliling npm -- this is auto excluded if you do not specify exclude. */
+  ]
+```
+
+```json
+"include": [  // this will override all files and only compile what is included.
+    "app.ts" // include this file
+    "**/*.prod.ts" // include all files that end in prod
+    "typescript" // include all files within this folder. *the folder name is typescript*
+  ]
+```
+
+```json
+"files": [  // this will override all files and only compile what is included.
+    "app.ts" // include only files
+    "typescript" // this will not work.
+  ]
+```
