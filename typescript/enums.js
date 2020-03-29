@@ -6,7 +6,7 @@ var Role;
     Role[Role["AUTHOR"] = 15] = "AUTHOR";
     Role[Role["CUSTOMER"] = 16] = "CUSTOMER";
 })(Role || (Role = {}));
-var person = {
+const person = {
     name: "Matthew",
     age: 35,
     totalNumberOfMonths: 12,
@@ -18,10 +18,10 @@ person.role.push(11);
 // person.role[1] = 11; // error
 // person.role = [2, "Me"]; // good
 // person.role = [2, "me", "you"]; // no good
-var favoriteActivities; // Identify array
-var favoriteActivities2; // Identify array
+let favoriteActivities; // Identify array
+let favoriteActivities2; // Identify array
 favoriteActivities = ["sports"]; // not favoriteActivities = "sports";
-var neverChangingArray = [
+const neverChangingArray = [
     "Jan",
     "Feb",
     "March",
@@ -30,8 +30,7 @@ var neverChangingArray = [
     "June"
 ];
 console.log(person.age);
-for (var _i = 0, _a = person.role; _i < _a.length; _i++) {
-    var hobby = _a[_i];
+for (const hobby of person.role) {
     console.log(hobby);
 }
 if (person.userType === Role.ADMIN) {

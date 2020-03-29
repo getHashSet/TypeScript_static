@@ -44,3 +44,10 @@ void -- no return
     "typescript" // this will not work.
   ]
 ```
+
+```json
+"compilerOptions": {
+  "target": "es5" //default
+  // remove es5 and type ctrl + space to see all conversion options.
+}
+```

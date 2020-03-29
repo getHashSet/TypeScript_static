@@ -1,6 +1,6 @@
 "use strict";
-var userInput; // this cannot be assined to values that require a type.
-var userName;
+let userInput; // this cannot be assined to values that require a type.
+let userName;
 userInput = "Jonny";
 userInput = true;
 userInput = 42;
