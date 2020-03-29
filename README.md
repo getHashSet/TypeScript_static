@@ -51,3 +51,14 @@ void -- no return
   // remove es5 and type ctrl + space to see all conversion options.
 }
 ```
+
+```json
+"outDir": "./scripts/javascript",                        /* Redirect output structure to the directory. */
+//by default the root directory is the directory with the inpute file.
+```
+
+```json
+"noEmitOnError": true // default is false
+// this will prevent your code from compliling when there are errors in it while -w the file.
+
+```
