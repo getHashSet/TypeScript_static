@@ -1,3 +1,4 @@
+"use strict";
 var userInput; // this cannot be assined to values that require a type.
 var userName;
 userInput = "Jonny";
