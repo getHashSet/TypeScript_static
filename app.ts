@@ -1,20 +1,23 @@
-console.log("by Matthew Carpenter");
+// const person: {
+// name: string;
+// age: number;
+// totalNumberOfMonths: 12; // this can be assined to a specific number.
+// } = {
+const person = {
+  name: "Matthew",
+  age: 35,
+  totalNumberOfMonths: 12,
+  hobbies: ["Magic", "Coding"]
+};
 
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-    let result = n1 + n2
-    if (showResult) {
-        console.log(phrase + result);
-    } else {
-        n1 + n2;
-    };
+let favoriteActivities: string[]; // Identify array
+let favoriteActivities2: any[]; // Identify array
+favoriteActivities = ["sports"]; // not favoriteActivities = "sports";
 
-}
+console.log(person.age);
 
-const number2 = 2.8;
-const number1 = 5;
-const printResult = true;
-const resultPhrase = "Result is: ";
+const item = person.name;
 
-const result = add(number1, number2, printResult, resultPhrase);
-
-console.log(result);
+for (const hobby of person.hobbies) {
+  console.log(hobby);
+};
