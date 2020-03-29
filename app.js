@@ -1,21 +1,23 @@
-// const person: {
-// name: string;
-// age: number;
-// totalNumberOfMonths: 12; // this can be assined to a specific number.
-// } = {
-var person = {
-    name: "Matthew",
-    age: 35,
-    totalNumberOfMonths: 12,
-    hobbies: ["Magic", "Coding"]
-};
-var favoriteActivities; // Identify array
-var favoriteActivities2; // Identify array
-favoriteActivities = ["sports"]; // not favoriteActivities = "sports";
-console.log(person.age);
-var item = person.name;
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log(hobby);
+function combine(input1, input2, resultConversion) {
+    var result;
+    if (typeof input1 === "number" && typeof input2 === "number") {
+        result = input2 + input2;
+    }
+    else if (typeof input1 === "string" && typeof input2 === "string") {
+        result = input1 + input2;
+    }
+    switch (resultConversion) {
+        case "as-number":
+            return +result;
+        case "as-number":
+            return result.toString();
+        default:
+    }
+    return result;
 }
-;
+var combineStuff = combine(18, 26, "as-number");
+console.log(combineStuff);
+var combineNames = combine("34", "44", "as-text");
+console.log(combineNames);
+var combineNamesAndNumbers = combine("Matthew", "James", "as-text");
+console.log(combineNamesAndNumbers);

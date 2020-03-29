@@ -1,23 +1,31 @@
-// const person: {
-// name: string;
-// age: number;
-// totalNumberOfMonths: 12; // this can be assined to a specific number.
-// } = {
-const person = {
-  name: "Matthew",
-  age: 35,
-  totalNumberOfMonths: 12,
-  hobbies: ["Magic", "Coding"]
-};
+function combine(
+  input1: number | string,
+  input2: number | string,
+  resultConversion: 'as-text' | 'as-number' // this will add the types to intelasence
+) {
+  let result;
+  if (typeof input1 === "number" && typeof input2 === "number") {
+    result = input2 + input2;
+  } else if (typeof input1 === "string" && typeof input2 === "string") {
+    result = input1 + input2;
+  }
 
-let favoriteActivities: string[]; // Identify array
-let favoriteActivities2: any[]; // Identify array
-favoriteActivities = ["sports"]; // not favoriteActivities = "sports";
+  switch (resultConversion) {
+    case "as-number":
+      return +result;
+    case "as-number":
+      return result.toString();
+    default:
+  }
 
-console.log(person.age);
+  return result;
+}
 
-const item = person.name;
+const combineStuff = combine(18, 26, "as-number");
+console.log(combineStuff);
 
-for (const hobby of person.hobbies) {
-  console.log(hobby);
-};
+const combineNames = combine("34", "44", "as-text");
+console.log(combineNames);
+
+const combineNamesAndNumbers = combine("Matthew", "James", "as-text");
+console.log(combineNamesAndNumbers);
